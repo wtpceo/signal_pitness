@@ -100,11 +100,6 @@ export default function ReviewsSection() {
                 {/* Header */}
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <img
-                      src={review.image}
-                      alt={review.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
                     <div>
                       <h4 className="font-bold text-gray-900">{review.name}</h4>
                       <p className="text-sm text-gray-500">{review.age}</p>

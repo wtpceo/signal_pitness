@@ -8,7 +8,7 @@ const trainers = [
     specialty: '바디프로필 전문',
     experience: '15년 경력',
     certifications: ['생활스포츠지도사', 'NSCA-CPT', '스포츠영양사'],
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80',
+    image: '/images/trainers/trainer1.png',
   },
   {
     name: '박지영',
@@ -16,7 +16,7 @@ const trainers = [
     specialty: '다이어트 & 체형교정',
     experience: '12년 경력',
     certifications: ['생활스포츠지도사', 'ACSM-CPT', '필라테스 지도자'],
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80',
+    image: '/images/trainers/trainer2.png',
   },
   {
     name: '이준호',
@@ -24,15 +24,7 @@ const trainers = [
     specialty: '근력 향상 & 재활',
     experience: '10년 경력',
     certifications: ['생활스포츠지도사', 'ISSA-CPT', '재활운동전문가'],
-    image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80',
-  },
-  {
-    name: '최서연',
-    role: '전문 트레이너',
-    specialty: '여성 전문 & PT',
-    experience: '8년 경력',
-    certifications: ['생활스포츠지도사', 'ACE-CPT', '산전산후 관리사'],
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
+    image: '/images/trainers/trainer3.png',
   },
 ];
 
@@ -51,29 +43,29 @@ export default function TrainersSection() {
         </div>
 
         {/* Trainers Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trainers.map((trainer, index) => (
             <Card
               key={index}
-              className="bg-gray-800 border-gray-700 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-gray-800 border-gray-700 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
             >
               <CardContent className="p-0">
                 {/* Image */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <img
                     src={trainer.image}
                     alt={trainer.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent" />
 
                   {/* Badge */}
-                  <Badge className="absolute top-4 right-4 bg-red-600 hover:bg-red-600">
+                  <Badge className="absolute top-4 right-4 bg-red-600 hover:bg-red-600 z-20">
                     {trainer.experience}
                   </Badge>
 
                   {/* Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                     <h3 className="text-2xl font-bold text-white mb-1">{trainer.name}</h3>
                     <p className="text-red-400 font-semibold mb-2">{trainer.role}</p>
                     <p className="text-gray-300 text-sm mb-4">{trainer.specialty}</p>

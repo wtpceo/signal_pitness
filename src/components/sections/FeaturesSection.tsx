@@ -8,7 +8,7 @@ const features = [
     subtitle: '지역 최고 수준의 프리미엄 헬스장',
     description:
       '센터에 들어서는 순간, 운동하고 싶은 마음을 불러일으키는 깔끔하고 쾌적한 인테리어가 회원님을 맞이합니다. 다양한 운동 목적에 맞춘 최신 운동기구들이 완벽하게 완비되어 있습니다.',
-    image: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=80',
+    image: '/images/facility/main_facility.jpg',
     highlights: ['최신 운동기구 완비', '쾌적한 인테리어', '다양한 운동 공간'],
   },
   {
@@ -54,9 +54,8 @@ export default function FeaturesSection() {
             return (
               <div
                 key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  isEven ? '' : 'lg:grid-flow-dense'
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${isEven ? '' : 'lg:grid-flow-dense'
+                  }`}
               >
                 {/* Content */}
                 <div className={`space-y-6 ${isEven ? '' : 'lg:col-start-2'}`}>

@@ -27,7 +27,7 @@ export default function HeroSection() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
             작심삼일을
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
@@ -46,15 +46,14 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 rounded-full shadow-2xl shadow-red-600/50 transition-all hover:scale-105"
+              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 rounded-full shadow-2xl shadow-red-600/50 transition-all hover:scale-105 hover:shadow-red-600/70"
             >
               무료 상담 신청하기
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6 rounded-full backdrop-blur-sm transition-all"
+              className="bg-white text-black hover:bg-gray-200 text-lg px-8 py-6 rounded-full shadow-xl transition-all hover:scale-105"
             >
               시설 둘러보기
             </Button>

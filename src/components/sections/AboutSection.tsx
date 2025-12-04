@@ -79,26 +79,26 @@ export default function AboutSection() {
 
           {/* Right Images */}
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <img
                 src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80"
                 alt="Gym Equipment"
-                className="rounded-2xl shadow-xl h-64 object-cover"
+                className="rounded-2xl shadow-xl h-64 w-full object-cover"
               />
               <img
                 src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
                 alt="Personal Training"
-                className="rounded-2xl shadow-xl h-64 object-cover mt-8"
+                className="rounded-2xl shadow-xl h-64 w-full object-cover sm:mt-8"
               />
               <img
                 src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80"
                 alt="Fitness Equipment"
-                className="rounded-2xl shadow-xl h-64 object-cover -mt-8"
+                className="rounded-2xl shadow-xl h-64 w-full object-cover sm:-mt-8"
               />
               <img
                 src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80"
                 alt="Gym Interior"
-                className="rounded-2xl shadow-xl h-64 object-cover"
+                className="rounded-2xl shadow-xl h-64 w-full object-cover"
               />
             </div>
 
