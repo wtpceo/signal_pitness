@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -84,15 +85,17 @@ export default function TrainersSection() {
               <CardContent className="p-0 flex flex-col h-full">
                 {/* Image */}
                 <div className="relative h-80 overflow-hidden flex-shrink-0">
-                  <img
+                  <Image
                     src={trainer.image}
                     alt={trainer.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
 
                   {/* Badge */}
-                  <Badge className="absolute top-4 right-4 bg-red-600 hover:bg-red-600 shadow-lg">
+                  <Badge className="absolute top-4 right-4 bg-red-600 hover:bg-red-600 shadow-lg z-10">
                     {trainer.experience}
                   </Badge>
                 </div>
