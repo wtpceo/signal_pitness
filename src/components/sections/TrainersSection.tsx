@@ -7,7 +7,7 @@ const trainers = [
     role: '대표',
     specialty: '재활 · 체형교정 · 통증케어',
     experience: 'Director',
-    image: '/images/trainers/trainer1.png',
+    image: '/images/trainers/trainer1.JPG',
     certifications: [
       '2015 WBC Fitness Summer Championship -75kg 5위',
       '2016 피트니스스타 보디빌딩대회 -70kg 6위',
@@ -28,7 +28,7 @@ const trainers = [
     role: '트레이너',
     specialty: '힙 디자인 · 바디프로필',
     experience: 'Senior',
-    image: '/images/trainers/trainer2.png',
+    image: '/images/trainers/trainer2.jpg',
     certifications: [
       '2022 NPCA 충청도 주니어 1위',
       '2022 NPCA 충청도 오픈 입상',
@@ -45,7 +45,7 @@ const trainers = [
     role: '트레이너',
     specialty: '기능성 트레이닝 · 재활',
     experience: 'Professional',
-    image: '/images/trainers/trainer3.png',
+    image: '/images/trainers/trainer3.jpg',
     certifications: [
       '한국인재교육원 RTS (운동 기능 처방사)',
       '생활체육지도자 2급 (보디빌딩)',
