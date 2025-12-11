@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import trainer1 from '@/assets/images/trainers/trainer1.JPG';
+import trainer2 from '@/assets/images/trainers/trainer2.jpg';
+import trainer3 from '@/assets/images/trainers/trainer3.jpg';
 
 const trainers = [
   {
@@ -8,7 +11,7 @@ const trainers = [
     role: '대표',
     specialty: '재활 · 체형교정 · 통증케어',
     experience: 'Director',
-    image: '/images/trainers/trainer1.JPG',
+    image: trainer1,
     certifications: [
       '2015 WBC Fitness Summer Championship -75kg 5위',
       '2016 피트니스스타 보디빌딩대회 -70kg 6위',
@@ -29,7 +32,7 @@ const trainers = [
     role: '트레이너',
     specialty: '힙 디자인 · 바디프로필',
     experience: 'Senior',
-    image: '/images/trainers/trainer2.jpg',
+    image: trainer2,
     certifications: [
       '2022 NPCA 충청도 주니어 1위',
       '2022 NPCA 충청도 오픈 입상',
@@ -46,7 +49,7 @@ const trainers = [
     role: '트레이너',
     specialty: '기능성 트레이닝 · 재활',
     experience: 'Professional',
-    image: '/images/trainers/trainer3.jpg',
+    image: trainer3,
     certifications: [
       '한국인재교육원 RTS (운동 기능 처방사)',
       '생활체육지도자 2급 (보디빌딩)',
@@ -75,21 +78,25 @@ export default function TrainersSection() {
           </p>
         </div>
 
-        {/* Trainers Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Trainers Grid - items-start to handle varying heights */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {trainers.map((trainer, index) => (
             <Card
               key={index}
-              className="bg-gray-800 border-gray-700 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 group overflow-hidden flex flex-col h-full"
+              className="bg-gray-800 border-gray-700 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 group overflow-hidden flex flex-col"
             >
-              <CardContent className="p-0 flex flex-col h-full">
-                {/* Image */}
-                <div className="relative h-80 overflow-hidden flex-shrink-0">
+              <CardContent className="p-0 flex flex-col">
+                {/* Image Container - No fixed height, let image dictate dimensions */}
+                <div className="relative w-full overflow-hidden">
                   <Image
                     src={trainer.image}
                     alt={trainer.name}
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    placeholder="blur"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                    className="group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
@@ -113,8 +120,8 @@ export default function TrainersSection() {
                   {/* Divider */}
                   <div className="h-px bg-gray-700 w-full my-4" />
 
-                  {/* Certifications - Scrollable if too long, or just list */}
-                  <div className="space-y-2 text-sm text-gray-300 flex-grow">
+                  {/* Certifications */}
+                  <div className="space-y-2 text-sm text-gray-300">
                     {trainer.certifications.map((cert, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 flex-shrink-0" />
